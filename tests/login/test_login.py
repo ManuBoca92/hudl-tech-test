@@ -7,14 +7,14 @@ from pages.login.LoginPage import LoginPage
 class TestsLogin:
     def test_valid_login(self):
         login_page = LoginPage(self.driver)
-        login_page.login("ebonom.n.mfam@gmail.com", "tester123")
+        login_page.login("ebonom.n.mfam@gmail.com", "askmeforpassword")
         home_page = HomePage(self.driver)
         home_menu = home_page.get_home_menu_nav().is_displayed()
         assert home_menu is True
 
     def test_invalid_login(self):
         login_page = LoginPage(self.driver)
-        login_page.login("test@example.com", "tester123")
+        login_page.login("test@example.com", "useanyrandometext")
         error_message = login_page.get_login_error_container().is_displayed()
         assert error_message is True
 

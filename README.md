@@ -1,23 +1,23 @@
 # hudl-tech-test
 
-### Test cases
-
-- Login with valid credentials
-- Login with invalid credentials and verify the error message
-- Login with missing credentials and verify the error message
-
 ## Setup
 
-I will using Page Object Model to setup the test framework. They advantages of using POM are;
+I setup the test framework using Page Object Model. They advantages of using POM are;
 
 - Makes our code cleaner and easy to understand.
 - Tests are more readable, flexible, and maintainable.
 - Re-usable code that reduces redundancy of code.
-- Shorten the learning curve for teststa nd help QA teams meet timelines.
+- Shorten the learning curve for testers and help QA teams meet timelines.
+
+### Test cases
+
+- Login with valid credentials
+- Login with invalid credentials and verify the error message
+- Login with missing credentials (email or password) and verify the error message
 
 ### Drivers
 
-Drivers can be set in system path for this project I have put all drivers inside `drivers` directory. For this project I used Chrome and Firefox drivers but other drivers for IE, Safari can be used. Please note that you need to have the browser of the driver you instead to use installed on your local machine.
+Drivers can be set in system path on your local machine, but for this project I have put all drivers inside `drivers` director and I only used Chrome and Firefox drivers, but other drivers such as IE, Safari can be used. Please note that you need to have the browser of the driver you instead to use installed on your local machine.
 
 - In case the `chromedriver` doesn't work, please download the chromedriver version that correlates with the same version of your Chrome browser and swap it for this one.
 
@@ -43,6 +43,11 @@ Before you can start installing or using packages in your virtual environment yo
 
 Arghhhh the final step! To install the needed packages for this project, which can be loacted inside the `requirements.txt` please run the following command for `Unix/macOS` use `python3 -m pip install -r requirements.txt` and for `Windows` use this command `py -m pip install -r requirements.txt`
 
+### Run Tests
+
+To run tests please make sure you have an activated env with all the need ackages from `requirements.txt`already installed.
+The command for running the test is `pytest tests --browser [browsername]` for example, say you want to run your test on a chrome browser `pytest tests --browser chrome` or on firefox then use this command `pytest tests --browser firefox`.
+
 ### Test Report
 
-For test resport I am keeping it simple by using `pytest-html`. Run the following command to run tests and save html report on the root of teh directory `pytest -v tests --browser chrome --html=htmlreport.html `
+For test resport I am keeping it simple by using `pytest-html`. Run the following command to run tests and save html report on the root of the directory `pytest -v tests --browser chrome --html=htmlreport.html `
