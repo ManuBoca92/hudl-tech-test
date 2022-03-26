@@ -2,7 +2,7 @@
 
 ## Setup
 
-I setup the test framework using Page Object Model. They advantages of using POM are;
+I setup the test framework using Python, selenium and Page Object Model Design. They advantages of using POM are;
 
 - Makes our code cleaner and easy to understand.
 - Tests are more readable, flexible, and maintainable.
@@ -10,7 +10,9 @@ I setup the test framework using Page Object Model. They advantages of using POM
 - Shorten the learning curve for testers and help QA teams meet timelines.
 
 ### Test cases
+
 I won't be covering a lot of negative test cases as this will bloat the E2E tests. I believe negative test cases should be covered on the lower level such as unit and API level, UI tests should focus on the happy paths and critical flows. Below are the list of test cases I will be writing;
+
 - Login with valid credentials
 - Login with invalid credentials and verify the error message
 - Login with missing credentials (email or password) and verify the error message
