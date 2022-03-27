@@ -23,9 +23,14 @@ Drivers can be set in system path on your local machine, but for this project I 
 
 - In case the `chromedriver` doesn't work, please download the chromedriver version that correlates with the same version of your Chrome browser and swap it for this one.
 
+### Run Tests Locally
+* First of all, please clone this repo and make sure you have **Python** installed.
+* Please make sure you have an activated `env` with all the needed ackages from `requirements.txt`already installed. Please go through **Packages** section below and follow the steps to create a virtual env.
+* The command for running the test is `pytest tests --browser [browsername]` for example, say you want to run your test on a chrome browser `pytest tests --browser chrome` or on firefox then use this command `pytest tests --browser firefox`.
+
 ### Packages
 
-In order to install the packages used for this project, please create a virtual env by following these steps.
+In order to install the packages used for this project, please create a virtual env  inside the cloned directory, by following these steps.
 
 #### Installing virtualenv
 
@@ -44,11 +49,6 @@ Before you can start installing or using packages in your virtual environment yo
 #### Installing packages
 
 Arghhhh the final step! To install the needed packages for this project, which can be loacted inside the `requirements.txt` please run the following command for `Unix/macOS` use `python3 -m pip install -r requirements.txt` and for `Windows` use this command `py -m pip install -r requirements.txt`
-
-### Run Tests
-
-To run tests please make sure you have an activated env with all the need ackages from `requirements.txt`already installed.
-The command for running the test is `pytest tests --browser [browsername]` for example, say you want to run your test on a chrome browser `pytest tests --browser chrome` or on firefox then use this command `pytest tests --browser firefox`.
 
 ### Test Report
 
